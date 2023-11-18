@@ -25,7 +25,7 @@ const Header = () => {
             <ul className="flex text-sm md:text-xl">
               <li className="mx-3 border-b-2 border-white/[0] hover:border-white/[100]">
                 <NavLink to="/" className={(navData) => navData.isActive ? "text-orange-500" : ""}>
-                  Home
+                  Search
                 </NavLink>
               </li>
               <li className="mx-3 border-b-2 border-white/[0] hover:border-white/[100]">
