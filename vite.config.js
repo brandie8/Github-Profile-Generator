@@ -5,7 +5,7 @@ export default {
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['react-icons'],
+      external: ['react-icons','axios'],
     },
   },
 };
