@@ -1,3 +1,5 @@
+import react from '@vitejs/plugin-react';
+
 export default {
   plugins: [react()],
   build: {
@@ -6,11 +8,11 @@ export default {
       plugins: [
         {
           name: 'replace-axios',
-          resolveId(source) {
-            if (source === 'axios') {
-              return source; // resolve 'axios' to itself
+          load(id) {
+            if (id === 'axios') {
+              return 'export default {}'; // replace 'axios' with an empty module
             }
-            return null; 
+            return null; // let other imports pass through
           },
         },
       ],
