@@ -6,13 +6,13 @@ export default {
     rollupOptions: {
       external: ['react', 'react-dom', 'react-icons'],
       plugins: [
-        {
+        { 
           name: 'replace-axios',
-          load(id) {
-            if (id === 'axios') {
-              return 'export default {}'; // replace 'axios' with an empty module
+          resolveId(source) {
+            if (source === 'axios') {
+              return source; // resolve 'axios' to itself
             }
-            return null; // let other imports pass through
+            return null;
           },
         },
       ],
