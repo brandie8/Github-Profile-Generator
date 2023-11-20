@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import axios from "axios";
-import Loader from "../Components/Loader";
-import RepoCard from "../Components/RepoCard";
+import Loader from "../Components/Loader.jsx";
+import RepoCard from "../Components/RepoCard.jsx";
 
 const MyProfile = () => {
   const [data, setData] = useState([]);

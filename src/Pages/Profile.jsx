@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { BsGithub } from "react-icons/bs";
 import { GoLocation } from "react-icons/go";
 import axios from "axios";
-import Loader from "../Components/Loader";
+import Loader from "../Components/Loader.jsx";
 
 const Profile = () => {
   let { username } = useParams();
